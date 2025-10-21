@@ -1,0 +1,5 @@
+{
+  "name": "Quarterly Performance Report – FMCG (Board Pack)",
+  "description": "An interactive dashboard to turn quarterly financial CSV data into a board-ready report with KPIs, charts, variance analysis, and custom-branded PDF exports.",
+  "requestFramePermissions": []
+}

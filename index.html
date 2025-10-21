@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quarterly Performance Report</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+      :root {
+        --font-sans: 'Inter', sans-serif;
+
+        /* Light Theme */
+        --color-primary-light: #4f46e5;
+        --color-primary-dark: #3730a3;
+        --color-bg-light: #f3f4f6;
+        --color-bg-elevated-light: #ffffff;
+        --color-text-light: #111827;
+        --color-text-muted-light: #6b7280;
+        --color-border-light: #e5e7eb;
+
+        --color-success-light: #16a34a;
+        --color-warning-light: #f59e0b;
+        --color-danger-light: #dc2626;
+        --color-danger-bg-light: #fee2e2;
+        --color-danger-text-light: #991b1b;
+
+        /* Dark Theme */
+        --color-primary-dark-theme: #818cf8;
+        --color-primary-dark-dark-theme: #a78bfa;
+        --color-bg-dark: #111827;
+        --color-bg-elevated-dark: #1f2937;
+        --color-text-dark: #f9fafb;
+        --color-text-muted-dark: #9ca3af;
+        --color-border-dark: #374151;
+        
+        --color-success-dark: #4ade80;
+        --color-warning-dark: #facc15;
+        --color-danger-dark: #f87171;
+        --color-danger-bg-dark: #450a0a;
+        --color-danger-text-dark: #fca5a5;
+      }
+      
+      html.dark {
+        --color-primary: var(--color-primary-dark-theme);
+        --color-primary-dark: var(--color-primary-dark-dark-theme);
+        --color-bg: var(--color-bg-dark);
+        --color-bg-elevated: var(--color-bg-elevated-dark);
+        --color-text-primary: var(--color-text-dark);
+        --color-text-muted: var(--color-text-muted-dark);
+        --color-border: var(--color-border-dark);
+        --color-success: var(--color-success-dark);
+        --color-warning: var(--color-warning-dark);
+        --color-danger: var(--color-danger-dark);
+        --color-danger-bg: var(--color-danger-bg-dark);
+        --color-danger-text: var(--color-danger-text-dark);
+      }
+      
+      body {
+        font-family: var(--font-sans);
+        background-color: var(--color-bg, var(--color-bg-light));
+        color: var(--color-text-primary, var(--color-text-light));
+        transition: background-color 0.3s, color 0.3s;
+      }
+
+      .dark body {
+        background-color: var(--color-bg-dark);
+        color: var(--color-text-dark);
+      }
+
+    </style>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+            },
+            colors: {
+              primary: 'var(--color-primary, var(--color-primary-light))',
+              'primary-dark': 'var(--color-primary-dark, var(--color-primary-dark))',
+              background: 'var(--color-bg, var(--color-bg-light))',
+              'background-elevated': 'var(--color-bg-elevated, var(--color-bg-elevated-light))',
+              'text-primary': 'var(--color-text-primary, var(--color-text-light))',
+              'text-muted': 'var(--color-text-muted, var(--color-text-muted-light))',
+              'border-color': 'var(--color-border, var(--color-border-light))',
+              success: 'var(--color-success, var(--color-success-light))',
+              warning: 'var(--color-warning, var(--color-warning-light))',
+              danger: 'var(--color-danger, var(--color-danger-light))',
+            }
+          }
+        }
+      }
+    </script>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "recharts": "https://aistudiocdn.com/recharts@^3.3.0",
+    "papaparse": "https://aistudiocdn.com/papaparse@^5.4.1"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
